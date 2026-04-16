@@ -9,7 +9,7 @@ export async function runYtDlp(videoId) {
   const url = buildYoutubeUrl(videoId);
 
   async function run(args) {
-    const { stdout } = await execFilePromise('./yt-dlp', args, {
+    const { stdout } = await execFilePromise('yt-dlp', args, {
       windowsHide: true,
       maxBuffer: 10 * 1024 * 1024,
       timeout: 20000, // increase timeout
